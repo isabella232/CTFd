@@ -1,6 +1,6 @@
 import "bootstrap/dist/js/bootstrap.bundle";
 import $ from "jquery";
-import hljs from 'highlight.js';
+import hljs from "highlight.js";
 
 export default () => {
   // TODO: This is kind of a hack to mimic a React-like state construct.
@@ -38,7 +38,7 @@ export default () => {
 
   $(() => {
     // Syntax highlighting
-    document.querySelectorAll('pre code').forEach((block) => {
+    document.querySelectorAll("pre code").forEach(block => {
       hljs.highlightBlock(block);
     });
   });

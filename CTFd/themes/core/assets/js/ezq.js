@@ -1,6 +1,6 @@
 import "bootstrap/js/dist/modal";
 import $ from "jquery";
-import hljs from 'highlight.js';
+import hljs from "highlight.js";
 
 const modalTpl =
   '<div class="modal fade" tabindex="-1" role="dialog">' +
@@ -83,9 +83,9 @@ export function ezAlert(args) {
   obj.find(".modal-footer").append(button);
 
   // Syntax highlighting
-  obj.find('pre code').each(function(_idx){
+  obj.find("pre code").each(function(_idx) {
     hljs.highlightBlock(this);
-  })
+  });
 
   $("main").append(obj);
 
@@ -164,9 +164,9 @@ export function ezQuery(args) {
   obj.find(".modal-footer").append(yes);
 
   // Syntax highlighting
-  obj.find('pre code').each(function(_idx){
+  obj.find("pre code").each(function(_idx) {
     hljs.highlightBlock(this);
-  })
+  });
 
   $("main").append(obj);
 
