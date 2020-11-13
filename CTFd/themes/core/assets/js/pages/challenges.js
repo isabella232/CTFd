@@ -6,6 +6,7 @@ import Moment from "moment";
 import $ from "jquery";
 import CTFd from "../CTFd";
 import config from "../config";
+import hljs from 'highlight.js';
 
 const api_func = {
   teams: x => CTFd.api.get_team_solves({ teamId: x }),
@@ -124,6 +125,10 @@ const displayChal = chal => {
     });
 
     challenge.postRender();
+
+    $("#challenge-window").find('pre code').each(function(_idx){
+      hljs.highlightBlock(this);
+    })
 
     window.location.replace(
       window.location.href.split("#")[0] + `#${chal.name}-${chal.id}`
